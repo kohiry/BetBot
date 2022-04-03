@@ -291,7 +291,7 @@ def get_text_messages(message):
 
     if message.text in ["Привет", "привет", "сап", "s"]:
         bot.send_message(message.from_user.id, "Привет, введи 'помощь' для информации о моих возможностях", reply_markup=keyboards(["бюджет", "помощь"]))
-    elif "@end144$21" in message.text:
+    elif "@end" in message.text:
         command = message.text.split()
         if len(command) > 5 or len(command) < 5:
             bot.send_message(message.from_user.id, "Ошибка! Пример записи: команда <значение1> <значение2> <название1> <название2>")
